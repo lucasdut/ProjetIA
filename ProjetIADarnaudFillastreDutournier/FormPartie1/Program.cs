@@ -14,6 +14,8 @@ namespace FormPartie1
         [STAThread]
         static void Main()
         {
+            Question qu = new Question("titre", "rep1", "rep2", "rep3", "rep4", "rep5", "rep6");
+            qu.SerializeQuestion(); 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FPartie1());
