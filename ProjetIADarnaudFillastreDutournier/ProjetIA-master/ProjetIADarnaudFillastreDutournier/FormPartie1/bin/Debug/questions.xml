@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfQuestion xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Question>
+    <intitule>Enoncé 1</intitule>
+    <rep1> </rep1>
+    <rep2> </rep2>
+  </Question>
+  <Question>
+    <intitule>Enoncé 2</intitule>
+    <rep1> </rep1>
+    <rep2> </rep2>
+  </Question>
+</ArrayOfQuestion>

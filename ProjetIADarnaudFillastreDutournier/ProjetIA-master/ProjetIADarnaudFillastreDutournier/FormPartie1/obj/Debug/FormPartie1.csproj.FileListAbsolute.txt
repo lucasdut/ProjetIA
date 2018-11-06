@@ -1,0 +1,28 @@
+H:\ProjetIADarnaudFillastreDutournier\FormPartie1\bin\Debug\FormPartie1.exe.config
+H:\ProjetIADarnaudFillastreDutournier\FormPartie1\bin\Debug\FormPartie1.exe
+H:\ProjetIADarnaudFillastreDutournier\FormPartie1\bin\Debug\FormPartie1.pdb
+H:\ProjetIADarnaudFillastreDutournier\FormPartie1\obj\Debug\FormPartie1.csprojResolveAssemblyReference.cache
+H:\ProjetIADarnaudFillastreDutournier\FormPartie1\obj\Debug\FormPartie1.FPartie1.resources
+H:\ProjetIADarnaudFillastreDutournier\FormPartie1\obj\Debug\FormPartie1.Properties.Resources.resources
+H:\ProjetIADarnaudFillastreDutournier\FormPartie1\obj\Debug\FormPartie1.csproj.GenerateResource.Cache
+H:\ProjetIADarnaudFillastreDutournier\FormPartie1\obj\Debug\FormPartie1.exe
+H:\ProjetIADarnaudFillastreDutournier\FormPartie1\obj\Debug\FormPartie1.pdb
+C:\Users\ldutournier\Documents\GitHub\ProjetIA\ProjetIADarnaudFillastreDutournier\FormPartie1\bin\Debug\FormPartie1.exe.config
+C:\Users\ldutournier\Documents\GitHub\ProjetIA\ProjetIADarnaudFillastreDutournier\FormPartie1\obj\Debug\FormPartie1.exe
+C:\Users\ldutournier\Documents\GitHub\ProjetIA\ProjetIADarnaudFillastreDutournier\FormPartie1\obj\Debug\FormPartie1.pdb
+C:\Users\ldutournier\Documents\GitHub\ProjetIA\ProjetIADarnaudFillastreDutournier\FormPartie1\bin\Debug\FormPartie1.exe
+C:\Users\ldutournier\Documents\GitHub\ProjetIA\ProjetIADarnaudFillastreDutournier\FormPartie1\bin\Debug\FormPartie1.pdb
+C:\Users\ldutournier\Documents\GitHub\ProjetIA\ProjetIADarnaudFillastreDutournier\FormPartie1\obj\Debug\FormPartie1.csprojResolveAssemblyReference.cache
+C:\Users\ldutournier\Documents\GitHub\ProjetIA\ProjetIADarnaudFillastreDutournier\FormPartie1\obj\Debug\FormPartie1.FPartie1.resources
+C:\Users\ldutournier\Documents\GitHub\ProjetIA\ProjetIADarnaudFillastreDutournier\FormPartie1\obj\Debug\FormPartie1.Properties.Resources.resources
+C:\Users\ldutournier\Documents\GitHub\ProjetIA\ProjetIADarnaudFillastreDutournier\FormPartie1\obj\Debug\FormPartie1.csproj.GenerateResource.Cache
+C:\Users\mdarnaud\Desktop\IA FILLASTRE DARNAUD DUTOURNIER\ProjetIA-master\ProjetIA-master\ProjetIADarnaudFillastreDutournier\FormPartie1\bin\Debug\FormPartie1.exe.config
+C:\Users\mdarnaud\Desktop\IA FILLASTRE DARNAUD DUTOURNIER\ProjetIA-master\ProjetIA-master\ProjetIADarnaudFillastreDutournier\FormPartie1\obj\Debug\FormPartie1.exe
+C:\Users\mdarnaud\Desktop\IA FILLASTRE DARNAUD DUTOURNIER\ProjetIA-master\ProjetIA-master\ProjetIADarnaudFillastreDutournier\FormPartie1\obj\Debug\FormPartie1.pdb
+C:\Users\mdarnaud\Desktop\IA FILLASTRE DARNAUD DUTOURNIER\ProjetIA-master\ProjetIA-master\ProjetIADarnaudFillastreDutournier\FormPartie1\bin\Debug\FormPartie1.exe
+C:\Users\mdarnaud\Desktop\IA FILLASTRE DARNAUD DUTOURNIER\ProjetIA-master\ProjetIA-master\ProjetIADarnaudFillastreDutournier\FormPartie1\bin\Debug\FormPartie1.pdb
+C:\Users\mdarnaud\Desktop\IA FILLASTRE DARNAUD DUTOURNIER\ProjetIA-master\ProjetIA-master\ProjetIADarnaudFillastreDutournier\FormPartie1\obj\Debug\FormPartie1.csprojResolveAssemblyReference.cache
+C:\Users\mdarnaud\Desktop\IA FILLASTRE DARNAUD DUTOURNIER\ProjetIA-master\ProjetIA-master\ProjetIADarnaudFillastreDutournier\FormPartie1\obj\Debug\FormPartie1.Properties.Resources.resources
+C:\Users\mdarnaud\Desktop\IA FILLASTRE DARNAUD DUTOURNIER\ProjetIA-master\ProjetIA-master\ProjetIADarnaudFillastreDutournier\FormPartie1\obj\Debug\FormPartie1.csproj.GenerateResource.Cache
+C:\Users\mdarnaud\Desktop\IA FILLASTRE DARNAUD DUTOURNIER\ProjetIA-master\ProjetIA-master\ProjetIADarnaudFillastreDutournier\FormPartie1\obj\Debug\FormPartie1.QuestionForm.resources
+C:\Users\mdarnaud\Desktop\IA FILLASTRE DARNAUD DUTOURNIER\ProjetIA-master\ProjetIA-master\ProjetIADarnaudFillastreDutournier\FormPartie1\obj\Debug\FormPartie1.MainForm.resources
