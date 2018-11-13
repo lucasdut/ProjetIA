@@ -7,3 +7,5 @@ H:\IA\problem solving\problem solving\Pluscourtchemin\Pluscourtchemin\obj\Debug\
 H:\IA\problem solving\problem solving\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.csproj.GenerateResource.Cache
 H:\IA\problem solving\problem solving\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.exe
 H:\IA\problem solving\problem solving\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.pdb
+H:\IA\problem solving\problem solving\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.Choix.resources
+H:\IA\problem solving\problem solving\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.Arbre.resources

@@ -136,9 +136,6 @@ namespace Pluscourtchemin
             }
             // Fermeture du StreamReader (obligatoire) 
             monStreamReader.Close();
-
-
-
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -155,5 +152,7 @@ namespace Pluscourtchemin
                 textBox3.Text = "";
             }
         }
+
+        
     }
 }

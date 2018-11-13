@@ -9,7 +9,9 @@ using System.Windows.Forms;
 namespace Pluscourtchemin
 {
     public class SearchTreeALaMain : SearchTree
-    {        
+    {
+        private TreeView arbre = new TreeView();
+        private Button Verification;          
         private void AjouterNoeudOuvert(GenericNode N2)
         {
             L_Ouverts.Add(N2);
@@ -35,6 +37,24 @@ namespace Pluscourtchemin
             {
 
             }
+        }
+        private List<TreeNode> GetNoeuds (TreeView a)
+        {
+            List<TreeNode> noeuds = new List<TreeNode>();
+            for (int i=0;i < a.GetNodeCount(true); i++)
+            {
+                noeuds.Add(a.GetNodeAt(i,i));
+            }
+            return noeuds;
+        }
+        private void ajouterNoeudSurArbre(TreeNode noeud, TreeNode noeudPere)
+        {
+            arbre.BeginUpdate();
+            foreach (TreeNode n in this.GetNoeuds(arbre))
+            {
+
+            }
+            arbre.EndUpdate();
         }
           
     }

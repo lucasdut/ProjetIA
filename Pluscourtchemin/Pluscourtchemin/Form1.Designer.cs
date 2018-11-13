@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -35,7 +36,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.treeView1 = new System.Windows.Forms.TreeView();
             this.button3 = new System.Windows.Forms.Button();
             this.listBoxgraphe = new System.Windows.Forms.ListBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -45,6 +45,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.treeView1 = new System.Windows.Forms.TreeView();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -75,7 +80,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(35, 274);
+            this.button2.Location = new System.Drawing.Point(35, 175);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 3;
@@ -104,21 +109,14 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(436, 176);
+            this.listBox1.Location = new System.Drawing.Point(149, 203);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(128, 121);
             this.listBox1.TabIndex = 6;
             // 
-            // treeView1
-            // 
-            this.treeView1.Location = new System.Drawing.Point(673, 117);
-            this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(152, 180);
-            this.treeView1.TabIndex = 7;
-            // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(35, 205);
+            this.button3.Location = new System.Drawing.Point(35, 146);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 8;
@@ -129,7 +127,7 @@
             // listBoxgraphe
             // 
             this.listBoxgraphe.FormattingEnabled = true;
-            this.listBoxgraphe.Location = new System.Drawing.Point(221, 142);
+            this.listBoxgraphe.Location = new System.Drawing.Point(35, 203);
             this.listBoxgraphe.Margin = new System.Windows.Forms.Padding(2);
             this.listBoxgraphe.Name = "listBoxgraphe";
             this.listBoxgraphe.Size = new System.Drawing.Size(100, 121);
@@ -195,11 +193,50 @@
             this.button6.Text = "Terminer";
             this.button6.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(443, 303);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(373, 249);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(449, 339);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(83, 13);
+            this.label7.TabIndex = 21;
+            this.label7.Text = "Voici le graphe :";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(526, 67);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(99, 13);
+            this.label5.TabIndex = 27;
+            this.label5.Text = "Treeview de l\'algo :";
+            // 
+            // treeView1
+            // 
+            this.treeView1.Location = new System.Drawing.Point(529, 90);
+            this.treeView1.Name = "treeView1";
+            this.treeView1.Size = new System.Drawing.Size(152, 180);
+            this.treeView1.TabIndex = 26;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(901, 585);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.treeView1);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -209,7 +246,6 @@
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.listBoxgraphe);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.treeView1);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -219,6 +255,7 @@
             this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,7 +270,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ListBox listBoxgraphe;
         private System.Windows.Forms.TextBox textBox3;
@@ -243,6 +279,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TreeView treeView1;
     }
 }
 
