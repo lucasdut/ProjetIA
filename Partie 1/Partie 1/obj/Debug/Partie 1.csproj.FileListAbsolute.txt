@@ -1,0 +1,20 @@
+C:\Users\User\source\repos\Partie 1\Partie 1\bin\Debug\Partie 1.exe.config
+C:\Users\User\source\repos\Partie 1\Partie 1\bin\Debug\Partie 1.exe
+C:\Users\User\source\repos\Partie 1\Partie 1\bin\Debug\Partie 1.pdb
+C:\Users\User\source\repos\Partie 1\Partie 1\obj\Debug\Partie 1.csprojAssemblyReference.cache
+C:\Users\User\source\repos\Partie 1\Partie 1\obj\Debug\Partie_1.Form1.resources
+C:\Users\User\source\repos\Partie 1\Partie 1\obj\Debug\Partie_1.Properties.Resources.resources
+C:\Users\User\source\repos\Partie 1\Partie 1\obj\Debug\Partie 1.csproj.GenerateResource.cache
+C:\Users\User\source\repos\Partie 1\Partie 1\obj\Debug\Partie 1.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Partie 1\Partie 1\obj\Debug\Partie 1.exe
+C:\Users\User\source\repos\Partie 1\Partie 1\obj\Debug\Partie 1.pdb
+C:\Users\User\Desktop\Partie 1\Partie 1\obj\Debug\Partie 1.csprojAssemblyReference.cache
+C:\Users\User\Desktop\Partie 1\Partie 1\obj\Debug\Partie_1.Form1.resources
+C:\Users\User\Desktop\Partie 1\Partie 1\obj\Debug\Partie_1.Properties.Resources.resources
+C:\Users\User\Desktop\Partie 1\Partie 1\obj\Debug\Partie 1.csproj.GenerateResource.cache
+C:\Users\User\Desktop\Partie 1\Partie 1\obj\Debug\Partie 1.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Partie 1\Partie 1\obj\Debug\Partie 1.exe
+C:\Users\User\Desktop\Partie 1\Partie 1\obj\Debug\Partie 1.pdb
+C:\Users\User\Desktop\Partie 1\Partie 1\bin\Debug\Partie 1.exe.config
+C:\Users\User\Desktop\Partie 1\Partie 1\bin\Debug\Partie 1.exe
+C:\Users\User\Desktop\Partie 1\Partie 1\bin\Debug\Partie 1.pdb

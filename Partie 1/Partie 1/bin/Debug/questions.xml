@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfQuestion xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Question>
+    <Intitule> Question 1</Intitule>
+  </Question>
+  <Question>
+    <Intitule> Question 2</Intitule>
+  </Question>
+  <Question>
+    <Intitule> Question 3</Intitule>
+  </Question>
+  <Question>
+    <Intitule> Question 4</Intitule>
+  </Question>
+  <Question>
+    <Intitule> Question 5</Intitule>
+  </Question>
+  <Question>
+    <Intitule> Question 6</Intitule>
+  </Question>
+</ArrayOfQuestion>
