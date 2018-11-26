@@ -1,6 +1,6 @@
 ﻿namespace Pluscourtchemin
 {
-    partial class Form1
+    partial class Dijkstra
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dijkstra));
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -49,12 +49,19 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.treeView1 = new System.Windows.Forms.TreeView();
+            this.labelTreeviewAlaMain = new System.Windows.Forms.Label();
+            this.treeView2 = new System.Windows.Forms.TreeView();
+            this.buttonAddNode = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.textboxNoeudAjoute = new System.Windows.Forms.TextBox();
+            this.buttonEdition = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(35, 117);
+            this.button1.Location = new System.Drawing.Point(35, 206);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(110, 23);
             this.button1.TabIndex = 0;
@@ -80,7 +87,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(35, 175);
+            this.button2.Location = new System.Drawing.Point(35, 264);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 3;
@@ -109,14 +116,14 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(149, 203);
+            this.listBox1.Location = new System.Drawing.Point(140, 292);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(128, 121);
             this.listBox1.TabIndex = 6;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(35, 146);
+            this.button3.Location = new System.Drawing.Point(35, 235);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 8;
@@ -127,7 +134,7 @@
             // listBoxgraphe
             // 
             this.listBoxgraphe.FormattingEnabled = true;
-            this.listBoxgraphe.Location = new System.Drawing.Point(35, 203);
+            this.listBoxgraphe.Location = new System.Drawing.Point(35, 292);
             this.listBoxgraphe.Margin = new System.Windows.Forms.Padding(2);
             this.listBoxgraphe.Name = "listBoxgraphe";
             this.listBoxgraphe.Size = new System.Drawing.Size(100, 121);
@@ -215,7 +222,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(526, 67);
+            this.label5.Location = new System.Drawing.Point(440, 80);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(99, 13);
             this.label5.TabIndex = 27;
@@ -223,16 +230,89 @@
             // 
             // treeView1
             // 
-            this.treeView1.Location = new System.Drawing.Point(529, 90);
+            this.treeView1.Location = new System.Drawing.Point(443, 96);
             this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(152, 180);
+            this.treeView1.Size = new System.Drawing.Size(152, 191);
             this.treeView1.TabIndex = 26;
             // 
-            // Form1
+            // labelTreeviewAlaMain
+            // 
+            this.labelTreeviewAlaMain.AutoSize = true;
+            this.labelTreeviewAlaMain.Location = new System.Drawing.Point(636, 80);
+            this.labelTreeviewAlaMain.Name = "labelTreeviewAlaMain";
+            this.labelTreeviewAlaMain.Size = new System.Drawing.Size(102, 13);
+            this.labelTreeviewAlaMain.TabIndex = 28;
+            this.labelTreeviewAlaMain.Text = "Treeview à la main :";
+            // 
+            // treeView2
+            // 
+            this.treeView2.CheckBoxes = true;
+            this.treeView2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.treeView2.Location = new System.Drawing.Point(630, 96);
+            this.treeView2.Name = "treeView2";
+            this.treeView2.Size = new System.Drawing.Size(154, 192);
+            this.treeView2.TabIndex = 29;
+            this.treeView2.Nodes.Add("0");
+            // 
+            // buttonAddNode
+            // 
+            this.buttonAddNode.Location = new System.Drawing.Point(790, 123);
+            this.buttonAddNode.Name = "buttonAddNode";
+            this.buttonAddNode.Size = new System.Drawing.Size(102, 23);
+            this.buttonAddNode.TabIndex = 30;
+            this.buttonAddNode.Text = "Ajouter noeud";
+            this.buttonAddNode.UseVisualStyleBackColor = true;
+            this.buttonAddNode.Click += new System.EventHandler(this.buttonAddNode_Click);
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(790, 152);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(75, 23);
+            this.button7.TabIndex = 31;
+            this.button7.Text = "Enlever";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(639, 39);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(209, 23);
+            this.button8.TabIndex = 32;
+            this.button8.Text = "Ajouter noeud au noeud selectionne";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // textboxNoeudAjoute
+            // 
+            this.textboxNoeudAjoute.Location = new System.Drawing.Point(452, 38);
+            this.textboxNoeudAjoute.Name = "textboxNoeudAjoute";
+            this.textboxNoeudAjoute.Size = new System.Drawing.Size(164, 20);
+            this.textboxNoeudAjoute.TabIndex = 33;
+            // 
+            // buttonEdition
+            // 
+            this.buttonEdition.Location = new System.Drawing.Point(790, 181);
+            this.buttonEdition.Name = "buttonEdition";
+            this.buttonEdition.Size = new System.Drawing.Size(75, 23);
+            this.buttonEdition.TabIndex = 34;
+            this.buttonEdition.Text = "Edition";
+            this.buttonEdition.UseVisualStyleBackColor = true;
+            this.buttonEdition.Click += new System.EventHandler(this.buttonEdition_Click);
+            // 
+            // Dijkstra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(901, 585);
+            this.Controls.Add(this.buttonEdition);
+            this.Controls.Add(this.textboxNoeudAjoute);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.buttonAddNode);
+            this.Controls.Add(this.treeView2);
+            this.Controls.Add(this.labelTreeviewAlaMain);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.treeView1);
             this.Controls.Add(this.label7);
@@ -253,7 +333,7 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
-            this.Name = "Form1";
+            this.Name = "Dijkstra";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -283,6 +363,13 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.Label labelTreeviewAlaMain;
+        private System.Windows.Forms.TreeView treeView2;
+        private System.Windows.Forms.Button buttonAddNode;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.TextBox textboxNoeudAjoute;
+        private System.Windows.Forms.Button buttonEdition;
     }
 }
 

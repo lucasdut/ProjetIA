@@ -9,3 +9,14 @@ H:\IA\problem solving\problem solving\Pluscourtchemin\Pluscourtchemin\obj\Debug\
 H:\IA\problem solving\problem solving\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.pdb
 H:\IA\problem solving\problem solving\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.Choix.resources
 H:\IA\problem solving\problem solving\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.Arbre.resources
+C:\Users\ldutournier\Documents\GitHub\ProjetIA\Pluscourtchemin\Pluscourtchemin\bin\Debug\Pluscourtchemin.exe.config
+C:\Users\ldutournier\Documents\GitHub\ProjetIA\Pluscourtchemin\Pluscourtchemin\bin\Debug\Pluscourtchemin.exe
+C:\Users\ldutournier\Documents\GitHub\ProjetIA\Pluscourtchemin\Pluscourtchemin\bin\Debug\Pluscourtchemin.pdb
+C:\Users\ldutournier\Documents\GitHub\ProjetIA\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.csprojResolveAssemblyReference.cache
+C:\Users\ldutournier\Documents\GitHub\ProjetIA\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.Choix.resources
+C:\Users\ldutournier\Documents\GitHub\ProjetIA\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.Arbre.resources
+C:\Users\ldutournier\Documents\GitHub\ProjetIA\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.Properties.Resources.resources
+C:\Users\ldutournier\Documents\GitHub\ProjetIA\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.csproj.GenerateResource.Cache
+C:\Users\ldutournier\Documents\GitHub\ProjetIA\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.exe
+C:\Users\ldutournier\Documents\GitHub\ProjetIA\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.pdb
+C:\Users\ldutournier\Documents\GitHub\ProjetIA\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.Dijkstra.resources

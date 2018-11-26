@@ -12,7 +12,7 @@ using System.IO;
 
 namespace Pluscourtchemin
 {
-    public partial class Form1 : Form
+    public partial class Dijkstra : Form
     {
         static public double[,] matrice;
         static public int nbnodes = 10;
@@ -21,7 +21,7 @@ namespace Pluscourtchemin
         static public SearchTreeALaMain m = new SearchTreeALaMain();
         static public SearchTree g = new SearchTree();
 
-        public Form1()
+        public Dijkstra()
         {
             InitializeComponent();
         }
@@ -153,6 +153,46 @@ namespace Pluscourtchemin
             }
         }
 
-        
+        List<TreeNode> CheckedNodes = new List<TreeNode>();
+
+        private void RemoveCheckedNodes(TreeNodeCollection nodes)
+        {
+            foreach(TreeNode node in nodes)
+            {
+                if (node.Checked)
+                {
+                    CheckedNodes.Add(node);
+                }
+                else
+                {
+                    RemoveCheckedNodes(node.Nodes);
+                }
+            }
+            foreach(TreeNode CheckedNode in CheckedNodes)
+            {
+                nodes.Remove(CheckedNode);
+            }
+        }
+
+        private void buttonAddNode_Click(object sender, EventArgs e)
+        {
+            treeView2.Nodes.Add("nouveau noeud");            
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            RemoveCheckedNodes(treeView2.Nodes);
+        }        
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            string nom = textboxNoeudAjoute.Text;
+            treeView2.SelectedNode.Nodes.Add(nom);
+        }
+
+        private void buttonEdition_Click(object sender, EventArgs e)
+        {
+            treeView2.SelectedNode.Text = textboxNoeudAjoute.Text;
+        }
     }
 }

@@ -58,11 +58,11 @@
       <DependentUpon>Choix.cs</DependentUpon>
     </Compile>
     <Compile Include="Node2.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Dijkstra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Dijkstra.Designer.cs">
+      <DependentUpon>Dijkstra.cs</DependentUpon>
     </Compile>
     <Compile Include="GenericNode.cs" />
     <Compile Include="Program.cs" />
@@ -72,8 +72,8 @@
     <EmbeddedResource Include="Choix.resx">
       <DependentUpon>Choix.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Dijkstra.resx">
+      <DependentUpon>Dijkstra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Arbre.resx">
       <DependentUpon>Arbre.cs</DependentUpon>

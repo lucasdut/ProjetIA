@@ -19,7 +19,7 @@ namespace Pluscourtchemin
 
         private void buttonQuestionsCours_Click(object sender, EventArgs e)
         {
-            Application.Run(new Form1());
+            Application.Run(new Dijkstra());
         }
 
         private void buttonAlgoDijkstra_Click(object sender, EventArgs e)
