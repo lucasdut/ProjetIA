@@ -155,44 +155,47 @@ namespace Pluscourtchemin
 
         List<TreeNode> CheckedNodes = new List<TreeNode>();
 
-        private void RemoveCheckedNodes(TreeNodeCollection nodes)
-        {
-            foreach(TreeNode node in nodes)
-            {
-                if (node.Checked)
-                {
-                    CheckedNodes.Add(node);
-                }
-                else
-                {
-                    RemoveCheckedNodes(node.Nodes);
-                }
-            }
-            foreach(TreeNode CheckedNode in CheckedNodes)
-            {
-                nodes.Remove(CheckedNode);
-            }
-        }
 
-        private void buttonAddNode_Click(object sender, EventArgs e)
-        {
-            treeView2.Nodes.Add("nouveau noeud");            
-        }
+
+
+
 
         private void button7_Click(object sender, EventArgs e)
         {
-            RemoveCheckedNodes(treeView2.Nodes);
-        }        
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            string nom = textboxNoeudAjoute.Text;
-            treeView2.SelectedNode.Nodes.Add(nom);
+            treeView2.SelectedNode.Remove();
         }
 
         private void buttonEdition_Click(object sender, EventArgs e)
         {
             treeView2.SelectedNode.Text = textboxNoeudAjoute.Text;
+        }
+
+        private void buttonVerif_Click(object sender, EventArgs e)
+        {
+            int a = treeView1.GetNodeCount(false);
+            int b = treeView2.GetNodeCount(false);
+            bool flag1 = true;
+            while (flag1)
+            {
+
+            }
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            TreeNode node = new TreeNode(textboxNoeudAjoute.Text);
+            treeView2.Nodes.Add(node);
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            string a = comboBox1.SelectedItem.ToString();
+            TreeNode node = new TreeNode(a);
+
+            if (a !="") {treeView2.SelectedNode.Nodes.Add(node); }
+            else {treeView2.Nodes.Add("nouveau noeud");}
+            
         }
     }
 }

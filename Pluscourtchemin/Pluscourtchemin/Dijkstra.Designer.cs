@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dijkstra));
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("0");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("1");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("2");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("3");
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -51,11 +55,13 @@
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.labelTreeviewAlaMain = new System.Windows.Forms.Label();
             this.treeView2 = new System.Windows.Forms.TreeView();
-            this.buttonAddNode = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
             this.textboxNoeudAjoute = new System.Windows.Forms.TextBox();
             this.buttonEdition = new System.Windows.Forms.Button();
+            this.buttonVerif = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button10 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -222,7 +228,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(440, 80);
+            this.label5.Location = new System.Drawing.Point(252, 71);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(99, 13);
             this.label5.TabIndex = 27;
@@ -230,7 +236,7 @@
             // 
             // treeView1
             // 
-            this.treeView1.Location = new System.Drawing.Point(443, 96);
+            this.treeView1.Location = new System.Drawing.Point(315, 106);
             this.treeView1.Name = "treeView1";
             this.treeView1.Size = new System.Drawing.Size(152, 191);
             this.treeView1.TabIndex = 26;
@@ -238,7 +244,7 @@
             // labelTreeviewAlaMain
             // 
             this.labelTreeviewAlaMain.AutoSize = true;
-            this.labelTreeviewAlaMain.Location = new System.Drawing.Point(636, 80);
+            this.labelTreeviewAlaMain.Location = new System.Drawing.Point(562, 38);
             this.labelTreeviewAlaMain.Name = "labelTreeviewAlaMain";
             this.labelTreeviewAlaMain.Size = new System.Drawing.Size(102, 13);
             this.labelTreeviewAlaMain.TabIndex = 28;
@@ -246,27 +252,28 @@
             // 
             // treeView2
             // 
-            this.treeView2.CheckBoxes = true;
             this.treeView2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.treeView2.Location = new System.Drawing.Point(630, 96);
+            this.treeView2.Location = new System.Drawing.Point(565, 122);
             this.treeView2.Name = "treeView2";
-            this.treeView2.Size = new System.Drawing.Size(154, 192);
+            treeNode5.Name = "";
+            treeNode5.Text = "0";
+            treeNode6.Name = "";
+            treeNode6.Text = "1";
+            treeNode7.Name = "";
+            treeNode7.Text = "2";
+            treeNode8.Name = "";
+            treeNode8.Text = "3";
+            this.treeView2.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode5,
+            treeNode6,
+            treeNode7,
+            treeNode8});
+            this.treeView2.Size = new System.Drawing.Size(172, 166);
             this.treeView2.TabIndex = 29;
-            this.treeView2.Nodes.Add("0");
-            // 
-            // buttonAddNode
-            // 
-            this.buttonAddNode.Location = new System.Drawing.Point(790, 123);
-            this.buttonAddNode.Name = "buttonAddNode";
-            this.buttonAddNode.Size = new System.Drawing.Size(102, 23);
-            this.buttonAddNode.TabIndex = 30;
-            this.buttonAddNode.Text = "Ajouter noeud";
-            this.buttonAddNode.UseVisualStyleBackColor = true;
-            this.buttonAddNode.Click += new System.EventHandler(this.buttonAddNode_Click);
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(790, 152);
+            this.button7.Location = new System.Drawing.Point(790, 122);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(75, 23);
             this.button7.TabIndex = 31;
@@ -274,26 +281,16 @@
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(639, 39);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(209, 23);
-            this.button8.TabIndex = 32;
-            this.button8.Text = "Ajouter noeud au noeud selectionne";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
             // textboxNoeudAjoute
             // 
-            this.textboxNoeudAjoute.Location = new System.Drawing.Point(452, 38);
+            this.textboxNoeudAjoute.Location = new System.Drawing.Point(715, 27);
             this.textboxNoeudAjoute.Name = "textboxNoeudAjoute";
             this.textboxNoeudAjoute.Size = new System.Drawing.Size(164, 20);
             this.textboxNoeudAjoute.TabIndex = 33;
             // 
             // buttonEdition
             // 
-            this.buttonEdition.Location = new System.Drawing.Point(790, 181);
+            this.buttonEdition.Location = new System.Drawing.Point(790, 151);
             this.buttonEdition.Name = "buttonEdition";
             this.buttonEdition.Size = new System.Drawing.Size(75, 23);
             this.buttonEdition.TabIndex = 34;
@@ -301,16 +298,63 @@
             this.buttonEdition.UseVisualStyleBackColor = true;
             this.buttonEdition.Click += new System.EventHandler(this.buttonEdition_Click);
             // 
+            // buttonVerif
+            // 
+            this.buttonVerif.Location = new System.Drawing.Point(790, 180);
+            this.buttonVerif.Name = "buttonVerif";
+            this.buttonVerif.Size = new System.Drawing.Size(75, 23);
+            this.buttonVerif.TabIndex = 35;
+            this.buttonVerif.Text = "Vérification";
+            this.buttonVerif.UseVisualStyleBackColor = true;
+            this.buttonVerif.Click += new System.EventHandler(this.buttonVerif_Click);
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(790, 206);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(75, 23);
+            this.button9.TabIndex = 37;
+            this.button9.Text = "ajout";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "",
+            "sous noeud 1",
+            "sous noeud 2",
+            "sous noeud 3",
+            "sous noeud 4",
+            "sous noeud 5"});
+            this.comboBox1.Location = new System.Drawing.Point(758, 85);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 39;
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(790, 235);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(75, 40);
+            this.button10.TabIndex = 40;
+            this.button10.Text = "Ajout noeud fils";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
             // Dijkstra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(901, 585);
+            this.Controls.Add(this.button10);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.button9);
+            this.Controls.Add(this.buttonVerif);
             this.Controls.Add(this.buttonEdition);
             this.Controls.Add(this.textboxNoeudAjoute);
-            this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
-            this.Controls.Add(this.buttonAddNode);
             this.Controls.Add(this.treeView2);
             this.Controls.Add(this.labelTreeviewAlaMain);
             this.Controls.Add(this.label5);
@@ -365,11 +409,13 @@
         private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.Label labelTreeviewAlaMain;
         private System.Windows.Forms.TreeView treeView2;
-        private System.Windows.Forms.Button buttonAddNode;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
         private System.Windows.Forms.TextBox textboxNoeudAjoute;
         private System.Windows.Forms.Button buttonEdition;
+        private System.Windows.Forms.Button buttonVerif;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button button10;
     }
 }
 
