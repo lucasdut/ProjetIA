@@ -31,3 +31,14 @@ H:\ProjetIA\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.Dijkstra.r
 H:\ProjetIA\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.Arbre.resources
 H:\ProjetIA\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.Properties.Resources.resources
 H:\ProjetIA\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.csproj.GenerateResource.Cache
+H:\ProjetIA\ProjetIA\Pluscourtchemin\Pluscourtchemin\bin\Debug\Pluscourtchemin.exe.config
+H:\ProjetIA\ProjetIA\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.exe
+H:\ProjetIA\ProjetIA\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.pdb
+H:\ProjetIA\ProjetIA\Pluscourtchemin\Pluscourtchemin\bin\Debug\Pluscourtchemin.exe
+H:\ProjetIA\ProjetIA\Pluscourtchemin\Pluscourtchemin\bin\Debug\Pluscourtchemin.pdb
+H:\ProjetIA\ProjetIA\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.csprojResolveAssemblyReference.cache
+H:\ProjetIA\ProjetIA\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.Choix.resources
+H:\ProjetIA\ProjetIA\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.Dijkstra.resources
+H:\ProjetIA\ProjetIA\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.Arbre.resources
+H:\ProjetIA\ProjetIA\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.Properties.Resources.resources
+H:\ProjetIA\ProjetIA\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.csproj.GenerateResource.Cache

@@ -20,7 +20,8 @@ namespace Pluscourtchemin
         static public int numfinal;
         static public SearchTreeALaMain m = new SearchTreeALaMain();
         static public SearchTree g = new SearchTree();
-
+        static private int compteurCorrectsNodes;
+        static private int compteurCorrectsNodesObjectif;
         public Dijkstra()
         {
             InitializeComponent();
@@ -152,12 +153,7 @@ namespace Pluscourtchemin
                 textBox3.Text = "";
             }
         }
-
-        List<TreeNode> CheckedNodes = new List<TreeNode>();
-
-
-
-
+        
 
 
         private void button7_Click(object sender, EventArgs e)
@@ -172,14 +168,53 @@ namespace Pluscourtchemin
 
         private void buttonVerif_Click(object sender, EventArgs e)
         {
-            int a = treeView1.GetNodeCount(false);
-            int b = treeView2.GetNodeCount(false);
-            bool flag1 = true;
-            while (flag1)
+            CheckRecursive();
+            if((compteurCorrectsNodes == compteurCorrectsNodesObjectif) && (compteurCorrectsNodes != 0))
             {
-
+                MessageBox.Show("Bien joué bro!");
             }
+            else
+            {
+                MessageBox.Show("Aie, je crois que tu t'es trompé mec1..");
+            }
+        }
+        
+        private void CheckRecursive()
+        {
+            TreeNodeCollection nodes = treeView1.Nodes;
+            TreeNodeCollection nodesToCheck = treeView2.Nodes;
+            if(treeView1.GetNodeCount(false) != treeView2.GetNodeCount(false))
+            {
+                MessageBox.Show("Aie, je crois que tu t'es trompé mec2..");                
+            }
+            else
+            {
+                for (int i = 0; i < nodes.Count; i++)
+                {
+                    SubRecursive(nodes[i], nodesToCheck[i]);
+                }
+            }
+            
+        }
 
+        /* Appelée par CheckRecursive */
+        private void SubRecursive(TreeNode treeNodeAlgo, TreeNode treeNodeToCheck)
+        {
+            if (treeNodeAlgo.Text == treeNodeToCheck.Text) { compteurCorrectsNodes++; }
+            compteurCorrectsNodesObjectif++;
+
+            if (treeNodeAlgo.Nodes.Count== treeNodeToCheck.Nodes.Count)
+            {
+                for (int j = 0; j < treeNodeAlgo.Nodes.Count; j++)
+                {
+                    SubRecursive(treeNodeAlgo.Nodes[j], treeNodeToCheck.Nodes[j]);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Aie, je crois que tu t'es trompé mec3..");
+            }
+            
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -197,5 +232,7 @@ namespace Pluscourtchemin
             else {treeView2.Nodes.Add("nouveau noeud");}
             
         }
+
+        
     }
 }
