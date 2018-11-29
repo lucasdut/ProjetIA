@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dijkstra));
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("0");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("1");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("2");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("3");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("0");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("1");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("2");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("3");
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -245,7 +245,7 @@
             // labelTreeviewAlaMain
             // 
             this.labelTreeviewAlaMain.AutoSize = true;
-            this.labelTreeviewAlaMain.Location = new System.Drawing.Point(562, 38);
+            this.labelTreeviewAlaMain.Location = new System.Drawing.Point(562, 9);
             this.labelTreeviewAlaMain.Name = "labelTreeviewAlaMain";
             this.labelTreeviewAlaMain.Size = new System.Drawing.Size(102, 13);
             this.labelTreeviewAlaMain.TabIndex = 28;
@@ -254,27 +254,27 @@
             // treeView2
             // 
             this.treeView2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.treeView2.Location = new System.Drawing.Point(565, 122);
+            this.treeView2.Location = new System.Drawing.Point(565, 63);
             this.treeView2.Name = "treeView2";
-            treeNode1.Name = "";
-            treeNode1.Text = "0";
-            treeNode2.Name = "";
-            treeNode2.Text = "1";
-            treeNode3.Name = "";
-            treeNode3.Text = "2";
-            treeNode4.Name = "";
-            treeNode4.Text = "3";
+            treeNode5.Name = "";
+            treeNode5.Text = "0";
+            treeNode6.Name = "";
+            treeNode6.Text = "1";
+            treeNode7.Name = "";
+            treeNode7.Text = "2";
+            treeNode8.Name = "";
+            treeNode8.Text = "3";
             this.treeView2.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2,
-            treeNode3,
-            treeNode4});
+            treeNode5,
+            treeNode6,
+            treeNode7,
+            treeNode8});
             this.treeView2.Size = new System.Drawing.Size(172, 166);
             this.treeView2.TabIndex = 29;
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(790, 122);
+            this.button7.Location = new System.Drawing.Point(727, 264);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(75, 23);
             this.button7.TabIndex = 31;
@@ -284,14 +284,14 @@
             // 
             // textboxNoeudAjoute
             // 
-            this.textboxNoeudAjoute.Location = new System.Drawing.Point(715, 27);
+            this.textboxNoeudAjoute.Location = new System.Drawing.Point(565, 25);
             this.textboxNoeudAjoute.Name = "textboxNoeudAjoute";
             this.textboxNoeudAjoute.Size = new System.Drawing.Size(164, 20);
             this.textboxNoeudAjoute.TabIndex = 33;
             // 
             // buttonEdition
             // 
-            this.buttonEdition.Location = new System.Drawing.Point(790, 151);
+            this.buttonEdition.Location = new System.Drawing.Point(646, 264);
             this.buttonEdition.Name = "buttonEdition";
             this.buttonEdition.Size = new System.Drawing.Size(75, 23);
             this.buttonEdition.TabIndex = 34;
@@ -301,7 +301,7 @@
             // 
             // buttonVerif
             // 
-            this.buttonVerif.Location = new System.Drawing.Point(790, 180);
+            this.buttonVerif.Location = new System.Drawing.Point(788, 128);
             this.buttonVerif.Name = "buttonVerif";
             this.buttonVerif.Size = new System.Drawing.Size(75, 23);
             this.buttonVerif.TabIndex = 35;
@@ -311,7 +311,7 @@
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(790, 206);
+            this.button9.Location = new System.Drawing.Point(565, 264);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(75, 23);
             this.button9.TabIndex = 37;
@@ -329,22 +329,21 @@
             "sous noeud 3",
             "sous noeud 4",
             "sous noeud 5"});
-            this.comboBox1.Location = new System.Drawing.Point(758, 85);
+            this.comboBox1.Location = new System.Drawing.Point(565, 237);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 39;
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(790, 235);
+            this.button10.Location = new System.Drawing.Point(692, 237);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 40);
+            this.button10.Size = new System.Drawing.Size(110, 23);
             this.button10.TabIndex = 40;
             this.button10.Text = "Ajout noeud fils";
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
-           
-            
+          
             // 
             // Dijkstra
             // 

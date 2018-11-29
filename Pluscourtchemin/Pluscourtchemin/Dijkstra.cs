@@ -22,6 +22,7 @@ namespace Pluscourtchemin
         static public SearchTree g = new SearchTree();
         static private int compteurCorrectsNodes;
         static private int compteurCorrectsNodesObjectif;
+        static private bool check;
         public Dijkstra()
         {
             InitializeComponent();
@@ -171,11 +172,7 @@ namespace Pluscourtchemin
             CheckRecursive();
             if((compteurCorrectsNodes == compteurCorrectsNodesObjectif) && (compteurCorrectsNodes != 0))
             {
-                MessageBox.Show("Bien joué bro!");
-            }
-            else
-            {
-                MessageBox.Show("Aie, je crois que tu t'es trompé mec1..");
+                MessageBox.Show("Bien joué!");
             }
         }
         
@@ -185,7 +182,7 @@ namespace Pluscourtchemin
             TreeNodeCollection nodesToCheck = treeView2.Nodes;
             if(treeView1.GetNodeCount(false) != treeView2.GetNodeCount(false))
             {
-                MessageBox.Show("Aie, je crois que tu t'es trompé mec2..");                
+                MessageBox.Show("Erreur");
             }
             else
             {
@@ -212,7 +209,7 @@ namespace Pluscourtchemin
             }
             else
             {
-                MessageBox.Show("Aie, je crois que tu t'es trompé mec3..");
+                MessageBox.Show("Aie, je crois que tu t'es trompé3..");
             }
             
         }
@@ -232,7 +229,5 @@ namespace Pluscourtchemin
             else {treeView2.Nodes.Add("nouveau noeud");}
             
         }
-
-        
     }
 }
