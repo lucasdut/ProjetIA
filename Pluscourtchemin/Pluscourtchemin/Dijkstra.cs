@@ -23,6 +23,8 @@ namespace Pluscourtchemin
         static private int compteurCorrectsNodes;
         static private int compteurCorrectsNodesObjectif;
         static private bool check;
+        static private List<string> fermesMain = new List<string>();
+        static private List<string> ouvertsMain = new List<string>();
         public Dijkstra()
         {
             InitializeComponent();
@@ -139,14 +141,24 @@ namespace Pluscourtchemin
             // Fermeture du StreamReader (obligatoire) 
             monStreamReader.Close();
         }
-
-        private void button4_Click(object sender, EventArgs e)
+        //fonction qui transforme une liste de noeuds en liste de string
+        private List<string> transfoListesNoeudsEnChar(List<GenericNode> liste)
+        {
+            List < string > transfo = new List<string>();
+            for (int i = 0; i < liste.Count; i++)
+            {
+                transfo[i] = liste[i].ToString();
+            }
+            return transfo;
+        }
+        //bouton qui valide l'envoi des ouverts (verifie que l'utiliateur ne rentre pas n'importe quoi (a corrriger)
+        private void button4_Click(object sender, EventArgs e) 
         {
             try
             {
                 char ferme = Convert.ToChar(textBox3);                           
                 textBox3.Text = "";
-                //m.L_Fermes.Add(mon noeud saisi);
+                
             }
             catch
             {
@@ -154,19 +166,35 @@ namespace Pluscourtchemin
                 textBox3.Text = "";
             }
         }
-        
+        //bouton qui valide l'envoi des ouverts (verifie que l'utiliateur ne rentre pas n'importe quoi (a corriger)
+        private void button5_Click(object sender, EventArgs e) 
+        {
+            try
+            {
+                char ferme = Convert.ToChar(textBox3);
+                textBox3.Text = "";
+                
+            }
+            catch
+            {
+                MessageBox.Show("Entrez quelque chose de correct svp");
+                textBox4.Text = "";
+            }
+        }
 
 
+        //bouton pour enlever un noeud
         private void button7_Click(object sender, EventArgs e)
         {
             treeView2.SelectedNode.Remove();
         }
-
+        //bouton qui change le texte d'un noeud
         private void buttonEdition_Click(object sender, EventArgs e)
         {
             treeView2.SelectedNode.Text = textboxNoeudAjoute.Text;
         }
 
+        //bouton qui lance la comparaison des deux arbres
         private void buttonVerif_Click(object sender, EventArgs e)
         {
             CheckRecursive();
@@ -176,6 +204,7 @@ namespace Pluscourtchemin
             }
         }
         
+        //Fonction qui sert à comparer les deux arbres
         private void CheckRecursive()
         {
             TreeNodeCollection nodes = treeView1.Nodes;
@@ -213,13 +242,13 @@ namespace Pluscourtchemin
             }
             
         }
-
+        //ajouter un noeud à l'arbre
         private void button9_Click(object sender, EventArgs e)
         {
             TreeNode node = new TreeNode(textboxNoeudAjoute.Text);
             treeView2.Nodes.Add(node);
         }
-
+        //ajouter un noeud fils à un noeud
         private void button10_Click(object sender, EventArgs e)
         {
             string a = comboBox1.SelectedItem.ToString();
@@ -229,5 +258,34 @@ namespace Pluscourtchemin
             else {treeView2.Nodes.Add("nouveau noeud");}
             
         }
+
+        private void textBox3_TextChanged(object sender, EventArgs e) //text box où on rentre les fermés 
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e) //text box où on rentre les ouverts
+        {
+
+        }
+        //bouton qui sert à lancer la comparaison
+        private void button6_Click(object sender, EventArgs e)
+        {
+            //On remplit la liste de fermés
+            string s = textBox3.Text;            
+            string[] noeuds = s.Split(',');
+            foreach (string noeud in noeuds)
+            {
+                fermesMain.Add(noeud);
+            }
+            /*//On remplit la liste de fermés
+            string s = textBox3.Text;
+            string[] noeuds = s.Split(',');
+            foreach (string noeud in noeuds)
+            {
+                fermesMain.Add(noeud);
+            }*/
+        }
+        //boucle qui parcours les deux listes et test pour correspondance
     }
 }

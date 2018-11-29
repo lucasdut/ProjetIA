@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dijkstra));
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("0");
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("1");
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("2");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("3");
+            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("0");
+            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("1");
+            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("2");
+            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("3");
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -62,7 +62,6 @@
             this.button9 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button10 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -153,6 +152,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 10;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // textBox4
             // 
@@ -160,6 +160,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 20);
             this.textBox4.TabIndex = 11;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // button4
             // 
@@ -179,6 +180,7 @@
             this.button5.TabIndex = 13;
             this.button5.Text = "Valider";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // label3
             // 
@@ -206,6 +208,7 @@
             this.button6.TabIndex = 16;
             this.button6.Text = "Terminer";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // pictureBox1
             // 
@@ -256,19 +259,19 @@
             this.treeView2.Cursor = System.Windows.Forms.Cursors.Default;
             this.treeView2.Location = new System.Drawing.Point(565, 63);
             this.treeView2.Name = "treeView2";
-            treeNode5.Name = "";
-            treeNode5.Text = "0";
-            treeNode6.Name = "";
-            treeNode6.Text = "1";
-            treeNode7.Name = "";
-            treeNode7.Text = "2";
-            treeNode8.Name = "";
-            treeNode8.Text = "3";
+            treeNode17.Name = "";
+            treeNode17.Text = "0";
+            treeNode18.Name = "";
+            treeNode18.Text = "1";
+            treeNode19.Name = "";
+            treeNode19.Text = "2";
+            treeNode20.Name = "";
+            treeNode20.Text = "3";
             this.treeView2.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode5,
-            treeNode6,
-            treeNode7,
-            treeNode8});
+            treeNode17,
+            treeNode18,
+            treeNode19,
+            treeNode20});
             this.treeView2.Size = new System.Drawing.Size(172, 166);
             this.treeView2.TabIndex = 29;
             // 
@@ -343,14 +346,12 @@
             this.button10.Text = "Ajout noeud fils";
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
-          
             // 
             // Dijkstra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(901, 585);
-            this.Controls.Add(this.button8);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button9);
@@ -419,7 +420,6 @@
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button8;
     }
 }
 
