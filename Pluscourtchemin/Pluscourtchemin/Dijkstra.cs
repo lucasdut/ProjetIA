@@ -18,13 +18,14 @@ namespace Pluscourtchemin
         static public int nbnodes = 10;
         static public int numinitial;
         static public int numfinal;
-        static public SearchTreeALaMain m = new SearchTreeALaMain();
         static public SearchTree g = new SearchTree();
         static private int compteurCorrectsNodes;
         static private int compteurCorrectsNodesObjectif;
         static private bool check;
         static private List<string> fermesMain = new List<string>();
         static private List<string> ouvertsMain = new List<string>();
+        static private int compteurEtapes = 0;
+        
         public Dijkstra()
         {
             InitializeComponent();
@@ -50,13 +51,14 @@ namespace Pluscourtchemin
         private void button2_Click(object sender, EventArgs e)
         {
             numinitial = Convert.ToInt32(textBox1.Text);
-            numfinal = Convert.ToInt32(textBox2.Text);
-            SearchTree g = new SearchTree();
+            numfinal = Convert.ToInt32(textBox2.Text);            
             Node2 N0 = new Node2();
             N0.numero = numinitial;
+            
             List<GenericNode> solution = g.RechercheSolutionAEtoile(N0);
-
+            
             Node2 N1 = N0;
+            //affichage
             for (int i = 1; i < solution.Count; i++)
             {
                 Node2 N2 = (Node2)solution[i];
@@ -92,7 +94,7 @@ namespace Pluscourtchemin
                 for (int j = 0; j < nbnodes; j++)
                     matrice[i, j] = -1;
 
-            // Ensuite on a ls tructure suivante : 
+            // Ensuite on a la structure suivante : 
             //  arc : n°noeud départ    n°noeud arrivée  valeur
             //  exemple 4 : 
             ligne = monStreamReader.ReadLine();
@@ -142,47 +144,16 @@ namespace Pluscourtchemin
             monStreamReader.Close();
         }
         //fonction qui transforme une liste de noeuds en liste de string
-        private List<string> transfoListesNoeudsEnChar(List<GenericNode> liste)
+        private List<string> transfoListesNoeudsEnString(List<GenericNode> liste)
         {
             List < string > transfo = new List<string>();
-            for (int i = 0; i < liste.Count; i++)
+            foreach(GenericNode node in liste)
             {
-                transfo[i] = liste[i].ToString();
+                transfo.Add(node.ToString());
             }
             return transfo;
         }
-        //bouton qui valide l'envoi des ouverts (verifie que l'utiliateur ne rentre pas n'importe quoi (a corrriger)
-        private void button4_Click(object sender, EventArgs e) 
-        {
-            try
-            {
-                char ferme = Convert.ToChar(textBox3);                           
-                textBox3.Text = "";
-                
-            }
-            catch
-            {
-                MessageBox.Show("Entrez quelque chose de correct svp");
-                textBox3.Text = "";
-            }
-        }
-        //bouton qui valide l'envoi des ouverts (verifie que l'utiliateur ne rentre pas n'importe quoi (a corriger)
-        private void button5_Click(object sender, EventArgs e) 
-        {
-            try
-            {
-                char ferme = Convert.ToChar(textBox3);
-                textBox3.Text = "";
-                
-            }
-            catch
-            {
-                MessageBox.Show("Entrez quelque chose de correct svp");
-                textBox4.Text = "";
-            }
-        }
-
-
+        
         //bouton pour enlever un noeud
         private void button7_Click(object sender, EventArgs e)
         {
@@ -203,7 +174,6 @@ namespace Pluscourtchemin
                 MessageBox.Show("Bien joué!");
             }
         }
-        
         //Fonction qui sert à comparer les deux arbres
         private void CheckRecursive()
         {
@@ -259,33 +229,60 @@ namespace Pluscourtchemin
             
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e) //text box où on rentre les fermés 
+       
+        private void verificationListes(List<string> Liste1, List<string> Liste2) //mettre un "flag" ici pour checker
+
         {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e) //text box où on rentre les ouverts
-        {
-
+            bool resultat = false; 
+            if (Liste1.Count == Liste2.Count)
+            {
+                for(int i = 0; i < Liste1.Count; i++)
+                {
+                    if (Liste1[i] == Liste2[i])
+                    {
+                        resultat = true;
+                    }
+                    else
+                    {
+                        resultat = false;
+                        break;
+                    }
+                }
+            }
+            if (resultat == true)
+            {
+                MessageBox.Show("C'est Ok!");
+            }
+            else
+            {
+                MessageBox.Show("Il y a des erreurs.");
+            }
+            
         }
         //bouton qui sert à lancer la comparaison
         private void button6_Click(object sender, EventArgs e)
         {
             //On remplit la liste de fermés
             string s = textBox3.Text;            
-            string[] noeuds = s.Split(',');
-            foreach (string noeud in noeuds)
+            string[] noeuds1 = s.Split(',');
+            foreach (string noeud in noeuds1)
             {
                 fermesMain.Add(noeud);
             }
-            /*//On remplit la liste de fermés
-            string s = textBox3.Text;
-            string[] noeuds = s.Split(',');
-            foreach (string noeud in noeuds)
+
+            //On remplit la liste des ouverts
+            string t = textBox4.Text;
+            string[] noeuds2 = t.Split(',');
+            foreach (string noeud in noeuds2)
             {
-                fermesMain.Add(noeud);
-            }*/
+                ouvertsMain.Add(noeud);
+            }
+            List<string> ouvertsAlgoEnString = transfoListesNoeudsEnString(g.liste_Etapes[compteurEtapes]); 
+            List<string> fermesAlgoEnString = transfoListesNoeudsEnString(g.liste_Etapes[compteurEtapes+1]);
+            compteurEtapes = compteurEtapes + 2;
+            
+            verificationListes(ouvertsMain, ouvertsAlgoEnString);
+            verificationListes(fermesMain, fermesAlgoEnString);
         }
-        //boucle qui parcours les deux listes et test pour correspondance
     }
 }
