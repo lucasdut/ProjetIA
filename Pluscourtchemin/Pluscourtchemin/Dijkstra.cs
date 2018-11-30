@@ -27,35 +27,32 @@ namespace Pluscourtchemin
         public Dijkstra()
         {
             InitializeComponent();
-            treeView2.SelectedNode.BeginEdit();
+            Initialisation();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        
+        private void Initialisation()
         {
-           
             matrice = new double[nbnodes, nbnodes];
             for (int i = 0; i < nbnodes; i++)
                 for (int j = 0; j < nbnodes; j++)
                     matrice[i, j] = -1;
 
-            matrice[0, 1] = 3;   matrice[1, 0] = 3;
-            matrice[0, 2] = 5;      matrice[2, 0] = 5;
-            matrice[0, 3] = 7;      matrice[3, 0] = 7;
-            matrice[1, 4] = 8;      matrice[4, 1] = 8;
-            matrice[2, 4] = 3;      matrice[4, 2] = 3;
-            matrice[4, 5] = 7;      matrice[5, 4] = 7;
-            matrice[5, 6] = 4;      matrice[6, 5] = 4;
-        }
+            matrice[0, 1] = 3; matrice[1, 0] = 3;
+            matrice[0, 2] = 5; matrice[2, 0] = 5;
+            matrice[0, 3] = 7; matrice[3, 0] = 7;
+            matrice[1, 4] = 8; matrice[4, 1] = 8;
+            matrice[2, 4] = 3; matrice[4, 2] = 3;
+            matrice[4, 5] = 7; matrice[5, 4] = 7;
+            matrice[5, 6] = 4; matrice[6, 5] = 4;
 
-        private void button2_Click(object sender, EventArgs e)
-        {
             numinitial = Convert.ToInt32(textBox1.Text);
-            numfinal = Convert.ToInt32(textBox2.Text);            
+            numfinal = Convert.ToInt32(textBox2.Text);
             Node2 N0 = new Node2();
             N0.numero = numinitial;
-            
+
             List<GenericNode> solution = g.RechercheSolutionAEtoile(N0);
-            
+
             Node2 N1 = N0;
             //affichage
             for (int i = 1; i < solution.Count; i++)
@@ -66,8 +63,10 @@ namespace Pluscourtchemin
                      + "   : " + Convert.ToString(matrice[N1.numero, N2.numero]));
                 N1 = N2;
             }
-
-            g.GetSearchTree(treeView1);
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+                       
 
         }
         private void button3_Click(object sender, EventArgs e)
@@ -76,7 +75,7 @@ namespace Pluscourtchemin
             StreamReader monStreamReader = new StreamReader("graphe1.txt");
 
             // Lecture du fichier avec un while, évidemment !
-            // 1ère ligne : "nombre de noeuds du graphe
+            // 1ère ligne : nombre de noeuds du graphe
             string ligne = monStreamReader.ReadLine();
             int i = 0;
             while (ligne[i] != ':') i++;
@@ -167,6 +166,7 @@ namespace Pluscourtchemin
         //bouton qui lance la comparaison des deux arbres
         private void buttonVerif_Click(object sender, EventArgs e)
         {
+            g.GetSearchTree(treeView1);
             CheckRecursive();
             if((compteurCorrectsNodes == compteurCorrectsNodesObjectif) && (compteurCorrectsNodes != 0))
             {
@@ -303,29 +303,7 @@ namespace Pluscourtchemin
             
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            int cpt = 0;
-            int cpt2 = 0;
-            foreach (List<GenericNode> Etapes in g.liste_chaqueEtape_Fermes)
-            {
-                listBox2.Items.Add("Etape " + cpt +" Longueur de la liste "+ Etapes.Count);
-                cpt++;
-                foreach(GenericNode node in Etapes)
-                {
-                    listBox2.Items.Add(node.ToString());
-                }
-            }
-            foreach (List<GenericNode> Etapes in g.liste_chaqueEtape_Ouverts)
-            {
-                listBox2.Items.Add("Etape " + cpt2+ "Longueur de la liste " + Etapes.Count);
-                cpt2++;
-                foreach (GenericNode node in Etapes)
-                {
-                    listBox2.Items.Add(node.ToString());
-                }
-            }
-        }
+        
 
         
     }
