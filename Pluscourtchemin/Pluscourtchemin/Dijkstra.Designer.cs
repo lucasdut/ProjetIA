@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("0");
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("1");
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("2");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("3");
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("0");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("1");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("2");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("3");
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -46,8 +46,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.treeView1 = new System.Windows.Forms.TreeView();
             this.labelTreeviewAlaMain = new System.Windows.Forms.Label();
             this.treeView2 = new System.Windows.Forms.TreeView();
             this.button7 = new System.Windows.Forms.Button();
@@ -57,6 +55,10 @@
             this.button9 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button10 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -182,22 +184,6 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(374, 42);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(99, 13);
-            this.label5.TabIndex = 27;
-            this.label5.Text = "Treeview de l\'algo :";
-            // 
-            // treeView1
-            // 
-            this.treeView1.Location = new System.Drawing.Point(377, 63);
-            this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(152, 191);
-            this.treeView1.TabIndex = 26;
-            // 
             // labelTreeviewAlaMain
             // 
             this.labelTreeviewAlaMain.AutoSize = true;
@@ -213,19 +199,19 @@
             this.treeView2.LabelEdit = true;
             this.treeView2.Location = new System.Drawing.Point(565, 63);
             this.treeView2.Name = "treeView2";
-            treeNode5.Name = "";
-            treeNode5.Text = "0";
-            treeNode6.Name = "";
-            treeNode6.Text = "1";
-            treeNode7.Name = "";
-            treeNode7.Text = "2";
-            treeNode8.Name = "";
-            treeNode8.Text = "3";
+            treeNode1.Name = "";
+            treeNode1.Text = "0";
+            treeNode2.Name = "";
+            treeNode2.Text = "1";
+            treeNode3.Name = "";
+            treeNode3.Text = "2";
+            treeNode4.Name = "";
+            treeNode4.Text = "3";
             this.treeView2.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode5,
-            treeNode6,
-            treeNode7,
-            treeNode8});
+            treeNode1,
+            treeNode2,
+            treeNode3,
+            treeNode4});
             this.treeView2.Size = new System.Drawing.Size(172, 166);
             this.treeView2.TabIndex = 29;
             // 
@@ -301,11 +287,47 @@
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(803, 360);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 41;
+            this.button4.Text = "button4";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.Location = new System.Drawing.Point(599, 350);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(187, 186);
+            this.listBox2.TabIndex = 42;
+            // 
+            // treeView1
+            // 
+            this.treeView1.Location = new System.Drawing.Point(347, 63);
+            this.treeView1.Name = "treeView1";
+            this.treeView1.Size = new System.Drawing.Size(152, 191);
+            this.treeView1.TabIndex = 26;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(374, 42);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(99, 13);
+            this.label5.TabIndex = 27;
+            this.label5.Text = "Treeview de l\'algo :";
+            // 
             // Dijkstra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(901, 585);
+            this.Controls.Add(this.listBox2);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button9);
@@ -354,8 +376,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.Label labelTreeviewAlaMain;
         private System.Windows.Forms.TreeView treeView2;
         private System.Windows.Forms.Button button7;
@@ -365,6 +385,10 @@
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.Label label5;
     }
 }
 

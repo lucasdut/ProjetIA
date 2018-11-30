@@ -10,7 +10,8 @@ namespace Pluscourtchemin
     {
         public List<GenericNode> L_Ouverts;
         public List<GenericNode> L_Fermes;
-        public List<List<GenericNode>> liste_Etapes= new List<List<GenericNode>>();
+        public List<List<GenericNode>> liste_chaqueEtape_Fermes= new List<List<GenericNode>>();
+        public List<List<GenericNode>> liste_chaqueEtape_Ouverts = new List<List<GenericNode>>();
 
         public int compteur = 0;
 
@@ -52,34 +53,28 @@ namespace Pluscourtchemin
         {
             L_Ouverts = new List<GenericNode>();
             L_Fermes = new List<GenericNode>();
+            //Deux listes temporaires qui iront implementer Liste_Chaque_Etape
+            List<GenericNode> fermTemp = new List<GenericNode>();
+            List<GenericNode> ouvTemp = new List<GenericNode>();
+            
             // Le noeud passé en paramètre est supposé être le noeud initial
             GenericNode N = N0;
             L_Ouverts.Add(N0);
-            GenericNode vide=new Node2();
-            L_Fermes.Add(vide);
+            ouvTemp.Add(N0);
+            
 
-            liste_Etapes.Add(L_Fermes);
-            liste_Etapes.Add(L_Ouverts);
-            List<GenericNode> noeudsF = liste_Etapes[0];
-            List<GenericNode> noeudsO = liste_Etapes[1];
-            compteur = compteur+2;
-            MessageBox.Show("fermes");
-            foreach (GenericNode node in noeudsF)
-            {
-                MessageBox.Show(node.ToString());
-            }
-            MessageBox.Show("ouverts");
-            foreach (GenericNode node in noeudsO)
-            {
-                
-                MessageBox.Show(node.ToString());
-            }
-
-           
-
+            //Copie des noeuds dans les grosses listes d'ouverts et fermes
+            liste_chaqueEtape_Fermes.Add(fermTemp);
+            liste_chaqueEtape_Ouverts.Add(ouvTemp);
+         
+            
             // tant que le noeud n'est pas terminal et que ouverts n'est pas vide
             while (L_Ouverts.Count != 0 && N.EndState() == false)
             {
+                //Deux listes temporaires qui iront implementer Liste_Chaque_Etape
+                List<GenericNode> fermTemp2 = new List<GenericNode>();
+                List<GenericNode> ouvTemp2 = new List<GenericNode>();
+
                 // Le meilleur noeud des ouverts est supposé placé en tête de liste
                 // On le place dans les fermés
                 L_Ouverts.Remove(N);
@@ -88,8 +83,6 @@ namespace Pluscourtchemin
                 // Il faut trouver les noeuds successeurs de N
                 this.MAJSuccesseurs(N);
                 // Inutile de retrier car les insertions ont été faites en respectant l'ordre
-
-
 
                 // On prend le meilleur, donc celui en position 0, pour continuer à explorer les états
                 // A condition qu'il existe bien sûr
@@ -101,27 +94,23 @@ namespace Pluscourtchemin
                 {
                     N = null;
                 }
-                liste_Etapes.Add(L_Fermes);
-                liste_Etapes.Add(L_Ouverts);
-                List<GenericNode> noeudsf = liste_Etapes[compteur];
-                List<GenericNode> noeudso = liste_Etapes[compteur+1];
 
-                MessageBox.Show("fermes");
-                foreach (GenericNode node in noeudsf)
+               
+                //implementation de ouvTemp et fermTemp
+
+                foreach (GenericNode noeud in L_Fermes)
                 {
-                    MessageBox.Show(node.ToString());
+                    fermTemp2.Add(noeud);
                 }
-                MessageBox.Show("ouverts");
-                foreach (GenericNode node in noeudso)
+                foreach (GenericNode noeud in L_Ouverts)
                 {
-
-                    MessageBox.Show(node.ToString());
+                    ouvTemp2.Add(noeud);
                 }
 
-                
-
+                //Copie des noeuds dans les grosses listes d'ouverts et fermes
+                liste_chaqueEtape_Fermes.Add(fermTemp2);
+                liste_chaqueEtape_Ouverts.Add(ouvTemp2);
             }
-
             // A* terminé
             // On retourne le chemin qui va du noeud initial au noeud final sous forme de liste
             // Le chemin est retrouvé en partant du noeud final et en accédant aux parents de manière

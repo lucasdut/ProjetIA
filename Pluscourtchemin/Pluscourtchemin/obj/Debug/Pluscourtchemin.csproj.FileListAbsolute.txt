@@ -43,13 +43,13 @@ H:\ProjetIA\ProjetIA\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.A
 H:\ProjetIA\ProjetIA\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.Properties.Resources.resources
 H:\ProjetIA\ProjetIA\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.csproj.GenerateResource.Cache
 H:\IA\ProjetIA\Pluscourtchemin\Pluscourtchemin\bin\Debug\Pluscourtchemin.exe.config
-H:\IA\ProjetIA\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.exe
-H:\IA\ProjetIA\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.pdb
 H:\IA\ProjetIA\Pluscourtchemin\Pluscourtchemin\bin\Debug\Pluscourtchemin.exe
 H:\IA\ProjetIA\Pluscourtchemin\Pluscourtchemin\bin\Debug\Pluscourtchemin.pdb
-H:\IA\ProjetIA\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.csprojResolveAssemblyReference.cache
 H:\IA\ProjetIA\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.Choix.resources
 H:\IA\ProjetIA\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.Dijkstra.resources
 H:\IA\ProjetIA\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.Arbre.resources
 H:\IA\ProjetIA\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.Properties.Resources.resources
 H:\IA\ProjetIA\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.csproj.GenerateResource.Cache
+H:\IA\ProjetIA\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.exe
+H:\IA\ProjetIA\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.pdb
+H:\IA\ProjetIA\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.csprojResolveAssemblyReference.cache

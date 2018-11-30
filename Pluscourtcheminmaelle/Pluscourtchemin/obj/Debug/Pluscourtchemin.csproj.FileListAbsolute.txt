@@ -64,3 +64,6 @@ H:\2A\IA\PROJET\ProjetIA-master\ProjetIA-master\Pluscourtchemin\Pluscourtchemin\
 H:\2A\IA\PROJET\ProjetIA-master\ProjetIA-master\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.Arbre.resources
 H:\2A\IA\PROJET\ProjetIA-master\ProjetIA-master\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.Properties.Resources.resources
 H:\2A\IA\PROJET\ProjetIA-master\ProjetIA-master\Pluscourtchemin\Pluscourtchemin\obj\Debug\Pluscourtchemin.csproj.GenerateResource.Cache
+H:\IA\ProjetIA\Pluscourtcheminmaelle\Pluscourtchemin\bin\Debug\Pluscourtchemin.exe.config
+H:\IA\ProjetIA\Pluscourtcheminmaelle\Pluscourtchemin\obj\Debug\Pluscourtchemin.exe
+H:\IA\ProjetIA\Pluscourtcheminmaelle\Pluscourtchemin\obj\Debug\Pluscourtchemin.pdb

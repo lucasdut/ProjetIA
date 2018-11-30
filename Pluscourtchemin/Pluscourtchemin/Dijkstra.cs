@@ -21,14 +21,13 @@ namespace Pluscourtchemin
         static public SearchTree g = new SearchTree();
         static private int compteurCorrectsNodes;
         static private int compteurCorrectsNodesObjectif;
-        static private bool check;
-        static private List<string> fermesMain = new List<string>();
-        static private List<string> ouvertsMain = new List<string>();
-        static private int compteurEtapes = 0;
+        
+        static private int compteurEtapes = 1;
         
         public Dijkstra()
         {
             InitializeComponent();
+            treeView2.SelectedNode.BeginEdit();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -230,12 +229,19 @@ namespace Pluscourtchemin
         }
 
        
-        private void verificationListes(List<string> Liste1, List<string> Liste2) //mettre un "flag" ici pour checker
+        private void verificationListes(List<string> Liste1, List<string> Liste2) 
 
         {
             bool resultat = false; 
+            
             if (Liste1.Count == Liste2.Count)
             {
+                MessageBox.Show("On rentre ici L239");
+                for(int i = 0; i< Liste1.Count; i++)
+                {
+                    MessageBox.Show("Les longueurs des listes sont de " + Liste2.Count);
+                    MessageBox.Show(Liste1[i] + " " + Liste2[i]);
+                }
                 for(int i = 0; i < Liste1.Count; i++)
                 {
                     if (Liste1[i] == Liste2[i])
@@ -262,27 +268,65 @@ namespace Pluscourtchemin
         //bouton qui sert à lancer la comparaison
         private void button6_Click(object sender, EventArgs e)
         {
+            List<string> fermesMain = new List<string>();
+            List<string> ouvertsMain = new List<string>(); 
+            
             //On remplit la liste de fermés
-            string s = textBox3.Text;            
+            string s = textBox3.Text;                        
             string[] noeuds1 = s.Split(',');
             foreach (string noeud in noeuds1)
             {
                 fermesMain.Add(noeud);
             }
-
+            
+            
             //On remplit la liste des ouverts
             string t = textBox4.Text;
+           
+            
             string[] noeuds2 = t.Split(',');
             foreach (string noeud in noeuds2)
             {
                 ouvertsMain.Add(noeud);
             }
-            List<string> ouvertsAlgoEnString = transfoListesNoeudsEnString(g.liste_Etapes[compteurEtapes]); 
-            List<string> fermesAlgoEnString = transfoListesNoeudsEnString(g.liste_Etapes[compteurEtapes+1]);
-            compteurEtapes = compteurEtapes + 2;
             
+            
+            MessageBox.Show("Nombre de fermes rentrés à la main : "+fermesMain.Count + "\n Nombre de fermes de l'algo"+ g.liste_chaqueEtape_Fermes[compteurEtapes].Count);
+            MessageBox.Show("Nombre d'ouverts rentrés à la main : "+ouvertsMain.Count + "\n Nombre d ouverts de l'algo" + g.liste_chaqueEtape_Ouverts[compteurEtapes].Count);
+
+            List<string> fermesAlgoEnString = transfoListesNoeudsEnString(g.liste_chaqueEtape_Fermes [compteurEtapes]);
+            List<string> ouvertsAlgoEnString = transfoListesNoeudsEnString(g.liste_chaqueEtape_Ouverts [compteurEtapes]);             
+            compteurEtapes++;
+
+            verificationListes(fermesMain, fermesAlgoEnString);            
             verificationListes(ouvertsMain, ouvertsAlgoEnString);
-            verificationListes(fermesMain, fermesAlgoEnString);
+            
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            int cpt = 0;
+            int cpt2 = 0;
+            foreach (List<GenericNode> Etapes in g.liste_chaqueEtape_Fermes)
+            {
+                listBox2.Items.Add("Etape " + cpt +" Longueur de la liste "+ Etapes.Count);
+                cpt++;
+                foreach(GenericNode node in Etapes)
+                {
+                    listBox2.Items.Add(node.ToString());
+                }
+            }
+            foreach (List<GenericNode> Etapes in g.liste_chaqueEtape_Ouverts)
+            {
+                listBox2.Items.Add("Etape " + cpt2+ "Longueur de la liste " + Etapes.Count);
+                cpt2++;
+                foreach (GenericNode node in Etapes)
+                {
+                    listBox2.Items.Add(node.ToString());
+                }
+            }
+        }
+
+        
     }
 }
